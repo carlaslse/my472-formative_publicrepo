@@ -1,0 +1,25 @@
+---
+title: "Exercise 1 markdown"
+author: "Candidate number 42664"
+date: "2024-10-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Step 1: Input transformation on dataset
+
+```{r step1}
+# read csv file of Eurostat data and filter to only have most recent data (year 2023) and store as corruption_data
+corruption_data <- read.csv("estat_corruption.csv") %>%
+  filter(TIME_PERIOD == 2023)
+head(corruption_data)
+```
+
+## Reference list
+
+Dataset derived from Eurostat Webpage: 
+Corruption Perceptions Index. (2024). [Data set]. European Commission, Eurostat. http://data.europa.eu/88u/dataset/ojmmqokcgkay4cdfkwdavw (Original work published 2017)
