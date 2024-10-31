@@ -18,7 +18,6 @@ library(tidyverse)
 data <- read.csv("estat_corruption.csv") %>%
   filter(TIME_PERIOD == 2023)
 head(data)
-print("this is a test")
 ```
 
 ## Reference list
