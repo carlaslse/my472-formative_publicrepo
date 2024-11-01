@@ -14,6 +14,7 @@ library(tidyverse)
 
 ```{r step1}
 # read csv file of Eurostat data and filter to only have most recent data (year 2023) and store as corruption_data
+
 data <- read.csv("estat_corruption.csv") %>%
   filter(TIME_PERIOD == 2023)
 head(data)
