@@ -18,6 +18,10 @@ library(tidyverse)
 data <- read.csv("estat_corruption.csv") %>%
   filter(TIME_PERIOD == 2023)
 head(data)
+
+corruption_data_new <- read.csv("estat_corruption.csv") %>%
+  select(geo, TIME_PERIOD, OBS_VALUE)
+head(corruption_data_new)
 ```
 
 ## Reference list

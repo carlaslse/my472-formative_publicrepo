@@ -361,6 +361,8 @@ display: none;
 <h2>Step 1: Input transformation on dataset</h2>
 <pre class="r"><code># read csv file of Eurostat data and filter to only have most recent data (year 2023) and store as corruption_data
 
+
+
 data &lt;- read.csv(&quot;estat_corruption.csv&quot;) %&gt;%
   filter(TIME_PERIOD == 2023)
 head(data)</code></pre>
@@ -378,13 +380,18 @@ head(data)</code></pre>
 ## 4       NA
 ## 5       NA
 ## 6       NA</code></pre>
-</div>
-<div id="reference-list" class="section level2">
-<h2>Reference list</h2>
-<p>Dataset derived from Eurostat Webpage: Corruption Perceptions Index.
-(2024). [Data set]. European Commission, Eurostat. <a href="http://data.europa.eu/88u/dataset/ojmmqokcgkay4cdfkwdavw" class="uri">http://data.europa.eu/88u/dataset/ojmmqokcgkay4cdfkwdavw</a>
-(Original work published 2017)</p>
-</div>
+
+<pre class="r"><code>corruption_data_new &lt;- read.csv(&quot;estat_corruption.csv&quot;) %&gt;%
+  select(geo, TIME_PERIOD, OBS_VALUE)
+head(corruption_data_new)</code></pre>
+<pre><code>##   geo TIME_PERIOD OBS_VALUE
+## 1  AL        2012        33
+## 2  AL        2013        31
+## 3  AL        2014        33
+## 4  AL        2015        36
+## 5  AL        2016        39
+## 6  AL        2017        38</code></pre>
+
 
 
 
