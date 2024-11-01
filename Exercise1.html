@@ -360,9 +360,9 @@ display: none;
 <div id="step-1-input-transformation-on-dataset" class="section level2">
 <h2>Step 1: Input transformation on dataset</h2>
 <pre class="r"><code># read csv file of Eurostat data and filter to only have most recent data (year 2023) and store as corruption_data
-corruption_data &lt;- read.csv(&quot;estat_corruption.csv&quot;) %&gt;%
+corruption_data_new &lt;- read.csv(&quot;estat_corruption.csv&quot;) %&gt;%
   select(geo, TIME_PERIOD, OBS_VALUE)
-head(corruption_data)</code></pre>
+head(corruption_data_new)</code></pre>
 <pre><code>##   geo TIME_PERIOD OBS_VALUE
 ## 1  AL        2012        33
 ## 2  AL        2013        31
